@@ -38,10 +38,6 @@ sudo usermod -a -G dialout <username>
 
 ... where \<username\> is the current username. e.g. pi
 
-The serial port connected to the sensor is assumed by the software to be /dev/ttyUSB0 . If this is not the case, modify the line in logaq.py :
-```
-ser.port = "/dev/ttyUSB0"
-```
 
 #### Luftdaten API
 To send data to the Luftdaten API, the software uses the Serial ID of the Raspberry Pi from the file /proc/cpuinfo prefixed with raspi-. For example:
@@ -54,7 +50,12 @@ If you have not registered with Luftdaten, the software will still run and log t
 
 To start the software run the command:
 ```
-python logaq.py
+logaq.py
+```
+
+The serial port connected to the sensor is assumed by the software to be /dev/ttyUSB0 . If this is not the case, pass the device name in the command line option e.g.
+```
+logaq.py /dev/ttyUSB1
 ```
 
 To make the software run automatically on every boot, add the command to crontab using the command :
@@ -64,8 +65,8 @@ crontab -e
 
 Then add the following line at the end of the crontab:
 ```
-@reboot sleep 60 && /usr/bin/python <path_to_piluft_source>/logaq.py
+@reboot sleep 60 && <path_to_piluft_source>/logaq.py
 ```
 
-... where <path_to_piluft_source> is the directory the piluft software is installed from github e.g. /home/pi/piluft/src .
+... where \<path_to_piluft_source\> is the directory to the piluft software is installed from github e.g. /home/pi/piluft/src .
 
