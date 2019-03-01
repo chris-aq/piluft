@@ -34,6 +34,7 @@ class LuftDaten() :
 
     def __init__(self):
         self.sensorID = "raspi-" + self.get_serial()
+        print("Sensor ID for this system for Luftdaten is: " + self.sensorID)
 
 
     # Get the serial number from cpuinfo
