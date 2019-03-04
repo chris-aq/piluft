@@ -1,9 +1,11 @@
 # Raspberry Pi Air Quality Measurements for Luftdaten
 
 This provides basic Python software running on a Raspberry Pi computer to read data from a Nova SDS011 Air Quality Sensor, log the data to a .csv file, and send the data to the Luftdaten site.
+
 The sensor is woken every 5 minutes and readings of PM2.5 and PM10 are taken and logged. This mode of operation should extend the lifetime of the sensor to over 3 years as it is only awake for around 10% of the time.
 
 Below are basic instructions on how to set the Raspberry Pi up to read data from the air quality sensor.
+
 Details of how to physically set up the sensor in a waterproof case are provided on the Luftdaten website.
 
 ## Requirements
