@@ -72,8 +72,9 @@ class LuftDaten() :
                 print ("Status:", req)
                 syslog.syslog(syslog.LOG_DEBUG, "Lufdaten post data status:" + str(req))
                 return
-            except:
-                syslog.syslog(syslog.LOG_DEBUG, "Exception pushing data to Luftdaten")
+            except Exception as e:
+                syslog.syslog(syslog.LOG_DEBUG, "Exception pushing data to Luftdaten: " + str(e))
+                time.sleep(2)
 
 
 """ Class to control and take readings from the SDS011 air quality sensor.
