@@ -29,7 +29,7 @@ This is connected to the USB (or micro-USB for Pi Zero) port of the Raspberry Pi
 The following additional modules are required to run the software.
 These can be installed with the command:
 ```
-sudo apt install python-requests python-serial python-numpy python-setuptools python-pip git libusb-dev
+sudo apt install python-requests python-serial python-numpy python-setuptools python-pip git libusb-dev rng-tools
 ```
 
 #### Serial Port
