@@ -6,7 +6,7 @@ The sensor is woken every 5 minutes and readings of PM2.5 and PM10 are taken and
 
 Below are basic instructions on how to set the Raspberry Pi up to read data from the air quality sensor.
 
-Details of how to physically set up the sensor in a waterproof case are provided on the Luftdaten website.
+Details of how to physically set up the controller and sensor in a weatherproof case are provided on the Luftdaten website.
 
 ## Requirements
 This guide assumes basic knowledge of electronics, the Unix environment, and some experience with the Raspberry Pi platform itself.
@@ -17,7 +17,7 @@ This guide assumes basic knowledge of electronics, the Unix environment, and som
 A Raspberry Pi Zero, 1, 2 or 3B, with one available USB port. Power supply. 8GB or 16GB SD Card.
 Recommend that the latest version of Raspbian is installed. At the time of writing, this is Raspbian Stretch.
 
-A Wifi connection to the internet (or wired ethernet for the Pi3B) is required to log the data to the Luftdaten server.
+A wifi or wired ethernet connection to the internet is required to log the data to the Luftdaten server.
 
 #### Nova SDS011 Air Quality Sensor
 This is connected to the USB (or micro-USB for Pi Zero) port of the Raspberry Pi.
