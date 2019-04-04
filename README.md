@@ -36,10 +36,10 @@ sudo apt install python-requests python-serial python-numpy python-setuptools py
 To allow the software to access the serial port connected to the air quality sensor, the user must be allowed access to the serial device.
 This can be done with the command:
 ```
-sudo usermod -a -G dialout <username>
+sudo usermod -a -G dialout $USER
 ```
 
-... where \<username\> is the current username. e.g. pi
+... where $USER is the current username. e.g. pi
 
 
 #### Luftdaten API
