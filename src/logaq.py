@@ -235,7 +235,7 @@ class SDS011() :
 if __name__ == "__main__":
 
     ap = argparse.ArgumentParser()
-    ap.add_argument('tty_device', nargs='?', default="/dev/ttyUSB0", help="The name of the tty devive e.g. /dev/ttyUSB0")
+    ap.add_argument('tty_device', nargs='?', default="/dev/ttyUSB0", help="The name of the tty device e.g. /dev/ttyUSB0")
     args = vars(ap.parse_args())
     tty_device = args["tty_device"]
     print("Using serial device: " + tty_device)
