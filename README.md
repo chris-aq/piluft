@@ -1,4 +1,4 @@
-# Raspberry Pi Air Quality Measurements for Luftdaten
+# Raspberry Pi PM10 and PM2.5 Air Quality Measurements for Luftdaten
 
 This provides basic Python software running on a Raspberry Pi computer to read data from a Nova SDS011 Air Quality Sensor, log the data to a .csv file, and send the data to the Luftdaten site.
 
