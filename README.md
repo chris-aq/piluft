@@ -14,7 +14,7 @@ This guide assumes basic knowledge of electronics, the Unix environment, and som
 ### Hardware
 
 #### RPi control box
-A Raspberry Pi Zero, 1, 2 or 3B, with one available USB port. Power supply. 8GB or 16GB SD Card.
+A Raspberry Pi Zero, 1, 2, 3B or 4, with one available USB port. Power supply. 8GB or larger SD Card.
 Recommend that the latest version of Raspbian is installed. At the time of writing, this is Raspbian Buster.
 
 A wifi or wired ethernet connection to the internet is required to log the data to the Luftdaten server.
