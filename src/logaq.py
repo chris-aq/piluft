@@ -32,8 +32,11 @@ MODE_QUERY = 1
 """
 class LuftDaten() :
 
-    def __init__(self):
-        self.sensorID = "raspi-" + self.get_serial()
+    def __init__(self, sensorID=None):
+        if sensorID is None :
+            self.sensorID = "raspi-" + self.get_serial()
+        else:
+            self.sensorID = sensorID
         print("Sensor ID for this system for Luftdaten is: " + self.sensorID)
 
 
@@ -176,7 +179,7 @@ class SDS011() :
     # Set the SDS011 measurement logger running
     def run(self) :
 
-        luft = LuftDaten()
+        luft = LuftDaten(sensorID=lufdaten_id)
 
         while True:
             self.cmd_set_sleep(0)
@@ -236,8 +239,11 @@ if __name__ == "__main__":
 
     ap = argparse.ArgumentParser()
     ap.add_argument('tty_device', nargs='?', default="/dev/ttyUSB0", help="The name of the tty device e.g. /dev/ttyUSB0")
+    ap.add_argument("-i", "--id", type=str, default=None, help="Lufdaten ID e.g raspi-0000000012345678")
+
     args = vars(ap.parse_args())
     tty_device = args["tty_device"]
+    lufdaten_id = args["id"]
     print("Using serial device: " + tty_device)
 
     sds011 = SDS011(serial_port=tty_device)
