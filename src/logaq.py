@@ -16,6 +16,7 @@ import requests
 AIR_QUALITY_FILENAME = os.path.expanduser("~/airquality.csv")
 PERIOD = 300         # Seconds
 NUM_READINGS = 10
+WAIT_BEFORE_READING = 30
 
 DEBUG = 0
 CMD_MODE = 2
@@ -276,7 +277,7 @@ if __name__ == "__main__":
     while True:
         sds011.sleep(sleep=False)
         # self.cmd_set_mode(1);
-        time.sleep(2)
+        time.sleep(WAIT_BEFORE_READING)
 
         # Values lists for pm value median calculation
         values_pm25 = []
